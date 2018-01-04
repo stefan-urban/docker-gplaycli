@@ -1,4 +1,6 @@
-FROM python:2.7-alpine
+FROM python:3-alpine
 
-RUN apk --update add python-dev libffi-dev openssl-dev gcc musl-dev linux-headers
-RUN pip install gplaycli
+RUN apk --update add python3-dev libffi-dev openssl-dev gcc musl-dev linux-headers libxml2-dev libxslt-dev
+RUN pip3 install gplaycli
+
+WORKDIR /dl
